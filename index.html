@@ -12,27 +12,33 @@
 
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-light sticky-top">
-        <a class="navbar-brand" href="#">Local Tech Girl</sa>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+
+        <a class="navbar-brand" href="#intro">Local Tech Girl</sa>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button>   
   
-        <div class="collapse navbar-collapse" id="navbarsExample04">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#intro">home</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">contact</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar">
+          <ul class="navbar-nav  mr-auto">
+            <li class="nav-item">
+              <a class="nav-link"></a>
+              <!-- leave blank, it's legacy code ;) trust me, I'm a photoshop expert and can produce any engineering degree forgery you can dream of -->
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li> -->
+              <a class="nav-link" href="#intro">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Service">services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">contact</a>
+            </li>
+            
             </ul>
           </div>
         </nav>
 
-    <div id="intro" class="container intro">
+    <div id="intro" class="container intro my-6">
     <div class="row align-items-center">
       <div class="introblock col-md-12">
         <H1>Hi, I'm LeAnn</H1>
@@ -42,28 +48,56 @@
     </div>
   </div>
     
-  <div class="services flex">
-    <div  class="align-middle">
+  <div id= "Service" class="container service-container flex align-items-center my-6" >
+    <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+    <div class="row">
+      <div class="col col-12  ">
         <H2>Services</H2>
         <div class="linebreak"></div>
-        <div></div>
-          <ul>
-            <li>Websites</li>
-            <li>Computer Maintenance</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>Virus Removal</li><li>Data Recovery</li>
-          </ul>
-        </div>
-        <p>and a variety of more - feel free to reach out and contact me</p>
+      </div>
     </div>
-  </div>
+    <div  class="align-middle row services-row">
+      <div class="col col-md-2 col-12 "></div>
+        <div class="col col-md-4">
+          <ul>
+            <li class="service-item"><a href="#Contact">Website Design & Hosting</a></li>
+            <li class="service-item"><a href="#Contact">Computer related issues</a></li>
+          </ul>
+        </div>
+        <div class="col col-md-4">
+          <ul>
+            <li class="service-item"><a href="#Contact">Virus Removal</a></li>
+            <li class="service-item"><a href="#Contact">Data Recovery</a></li>
+          </ul>
+        </div>
+        <div class="col col-md-2 col-12">
+        
+        </div>
+     </div>
+    </div>
 
 
-
-
+    <div id="Contact" class="container contact-container my-6">
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="row">
+        <div class="col col-12">
+          <H2>Contact</H2>
+          <div class="linebreak"></div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="placeholderDiv"></div> -->
+      </div>
+      <div class="row"></div>
+      <div class="row"></div>
+    </div>
+    <!-- <div class="placeholderDiv"></div> -->
+    <div class="spacer"></div>
+    <!-- <div class="placeholderDiv"></div> -->
     <footer class="footer">
       <div class="container align-middle mx-auto">
         <span id="footerText" class="text-muted">your goto girl for all your tech needs</span>
