@@ -21,13 +21,13 @@
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
-    --washout-rgb: black;
+    --washout-rgb: white;
 
 }
 body{
     background: radial-gradient(white, transparent),var(--washout-rgb);
     min-height: 100vh;
-
+    transition: var(--default-transition);
 }
 
 .intro
