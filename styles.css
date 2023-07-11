@@ -43,6 +43,7 @@ nav{
     
     background: var(--default-rgb);
     transition: 100ms;
+    box-shadow: 0 6px 50px 2px rgb(255, 255, 255), inset 1px 1px 52px rgb(255, 255, 255), 0 0 60px rgb(0, 0, 0);
 }
 footer{
     text-align: center;
