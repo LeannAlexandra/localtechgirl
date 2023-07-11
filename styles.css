@@ -1,0 +1,80 @@
+:root{
+    --default-rgb: linear-gradient(76.0001deg, 
+    rgb(211, 253, 184), 
+    rgb(182, 252, 213), 
+    rgb(166, 233, 241), 
+    rgb(170, 203, 255), 
+    rgb(191, 177, 249), 
+    rgb(221, 165, 225),
+    rgb(246, 174, 195));
+    --circle-rgb:conic-gradient(76.0001deg, 
+    rgb(211, 253, 184), 
+    rgb(182, 252, 213), 
+    rgb(166, 233, 241), 
+    rgb(170, 203, 255), 
+    rgb(191, 177, 249), 
+    rgb(221, 165, 225),
+    rgb(246, 174, 195));
+    --default-transition: 100ms;
+    --clr-background: rgb(239, 239, 239);
+    --line-width:30vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+    --washout-rgb: black;
+
+}
+body{
+    background: radial-gradient(white, transparent),var(--washout-rgb);
+    min-height: 100vh;
+
+}
+
+.intro
+{
+    min-height: 70vh;
+    text-align: center;
+    /* //min-height: 450px; */
+    
+    /* background: var(--default-rgb); */
+        
+}
+nav{
+    
+    background: var(--default-rgb);
+    transition: 100ms;
+}
+footer{
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    transition: var(--default-transition);
+    
+    background: var(--default-rgb);
+}
+.introblock
+{
+    margin-top:30vh;
+    /* border-style: solid;
+    border-radius: 20px; */
+    border-image: var(--circle-rgb) 1;
+    
+    min-height: 30vh;
+    transition: var(--default-transition)
+    /* margin-bottom:10vh; */
+}
+.linebreak{
+    margin: 0 auto;
+    height: 5px;
+    border-radius: 5px;
+    width: var(--line-width);
+    background: var(--default-rgb);
+    transition: var(--default-transition)
+}
+.linebreak:hover{
+    transform: scale(1.2);
+}
+h1:hover{
+    transform: scale(1.2);
+}
