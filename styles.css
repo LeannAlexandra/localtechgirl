@@ -21,7 +21,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     user-select: none;
-    --washout-rgb: white;
+    --washout-rgb: var(--default-rgb);
     --clr-charcoal: rgb(93,93,93);
 
 }
@@ -54,12 +54,12 @@ a:visited{
 .intro
 {
     /* margin-top: 20vh; */
-    min-height: 70vh;
+    height: 70vh;
     text-align: center;
     /* background: radial-gradient(circle at center,transparent 30%, white 30%, white 31%, transparent 31%); */
     background: 
         radial-gradient(circle at 45% 35%,white 3%, transparent 10%),
-        radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.02) 30.2%,transparent 30.2%),
+        radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.04) 30.2%,transparent 30.2%),
         radial-gradient(circle at center,transparent 20%, white 30%, white 34%, transparent 45%);
 
     transition: 300ms;
@@ -135,7 +135,7 @@ h1:hover{
     height: 200px;
     width: 200px;
     border: 3px solid;
-    border-radius: 50%;
+    /* //border-radius: 50%; */
     border-image-slice: 1;
     border-image-source: var(--circle-rgb);
 }
