@@ -59,8 +59,8 @@ a:visited{
     /* background: radial-gradient(circle at center,transparent 30%, white 30%, white 31%, transparent 31%); */
     background: 
         radial-gradient(circle at 45% 35%,white 3%, transparent 10%),
-        radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.04) 30.2%,transparent 30.2%),
-        radial-gradient(circle at center,transparent 20%, white 30%, white 34%, transparent 45%);
+        radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
+        radial-gradient(circle at center,white 10%, transparent 30%, white 30%, white 34%, transparent 45%);
 
     transition: 300ms;
     /* ,var(--circle-rgb); */

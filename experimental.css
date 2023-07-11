@@ -21,3 +21,8 @@
     -webkit-mask-composite: xor;
             mask-composite: exclude; 
   }
+.colors{
+ color: #5b1d63;
+ background-color: #fffc54;
+
+}
