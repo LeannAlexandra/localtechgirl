@@ -1,20 +1,24 @@
 .box {
     /* //display: ; */
-    height: 30vw;
-    width: 30vw;
-    min-width: 300px;
-    min-height: 300px;
+    /* height: 30vw; */
+    /* width: 30vw; */
+    /* min-width: 300px;
+    min-height: 300px; */
     margin: auto;
+    /* padding: 60px; */
     position: relative;
-    bottom: 196px;
+    max-width: 60vw;
+    /* bottom: 196px; */
   }
   .box::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 50%; 
+    border-radius: 60px; 
     padding: 10px; 
     background:var(--circle-rgb); 
+    /* mask: none; */
+    mask:inherit;
     -webkit-mask: 
        linear-gradient(#fff 0 0) content-box, 
        linear-gradient(#fff 0 0);

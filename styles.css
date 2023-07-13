@@ -139,3 +139,14 @@ h1:hover{
     border-image-slice: 1;
     border-image-source: var(--circle-rgb);
 }
+.contactCard{
+    /* height: fit-content; */
+    /* min-height: 900px; */
+    border-radius: 20px;
+    margin: 60px auto;
+    padding: 160px 0;
+}
+.brand{
+    filter:
+    drop-shadow( 0 0 10px rgb(255, 255, 255), 03px 0 2px rgb(255, 255, 255)), -03px 0 5px rgb(0, 0, 0);
+}
