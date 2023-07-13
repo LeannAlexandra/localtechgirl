@@ -2,9 +2,8 @@ let paused=false;
 const rgbValues =[];
 const washoutValues =[];
 const rgbRadialValues =[];
-let jumpIndex=130;
-const rMovement=[];
-const rwhoustmovm=[];
+let jumpIndex=126;
+let calculateRGB=true;
 
 runCPUIntesive();//it's been optimized ...
 
@@ -17,14 +16,19 @@ let i=1;
 
 function runCPUIntesive(){
     setInterval(() => {
-        if (paused){
+        if (paused)
              return;   
-        }
-        if(i>126){
-            let k=i%126;
-            document.documentElement.style.setProperty('--default-rgb', rgbValues[k]);
-            document.documentElement.style.setProperty('--circle-rgb', rgbRadialValues[k]);
-            document.documentElement.style.setProperty('--washout-rgb', washoutValues[k]);
+
+        if(calculateRGB && i>jumpIndex)
+            calculateRGB=false;
+
+        if(!calculateRGB){ //reversed order because expecting this to happen a lot more*
+            if(i>=jumpIndex){ // can actually bypass the test and just leave the mod.
+                i=i%jumpIndex;
+            } // ensures i is always smaller than jump index.
+            document.documentElement.style.setProperty('--default-rgb', rgbValues[i]);
+            document.documentElement.style.setProperty('--circle-rgb', rgbRadialValues[i]);
+            document.documentElement.style.setProperty('--washout-rgb', washoutValues[i]);
         }
         else{
             const offset=27;
@@ -54,10 +58,8 @@ function runCPUIntesive(){
                 variable+=temp;
                 washout+=`, rgb(${rwashout},${gwashout},${bwashout})`
                 if (a===0){
-                    conic+=`rgb(${r},${g},${b})`
-                    cfirst=`, rgb(${r},${g},${b})`
-                    rMovement.push(r);
-                    rwhoustmovm.push(rwashout);
+                    conic+=`rgb(${r},${g},${b})`;
+                    cfirst=`, rgb(${r},${g},${b})`;
                 }
                 else
                     conic+=temp;
@@ -66,6 +68,7 @@ function runCPUIntesive(){
             variable+=`)`;
             conic+=cfirst+`)`;
             conic=`conic-gradient(`+conic;
+
             washoutValues.push(washout);
             rgbValues.push(variable);     
             rgbRadialValues.push(conic);
@@ -76,6 +79,10 @@ function runCPUIntesive(){
         i++;
     }, 100);
 }
+
+
+
+
 ///////////////  FOOTER YEAR /////////////
 setFooterText();
 function setFooterText(){

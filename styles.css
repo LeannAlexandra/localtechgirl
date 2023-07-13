@@ -132,8 +132,8 @@ h1:hover{
 }
 .circleLoading{
     margin: 50px auto 0;
-    height: 200px;
-    width: 200px;
+    /* height: 200px; */
+    /* width: 200px; */
     border: 3px solid;
     /* //border-radius: 50%; */
     border-image-slice: 1;
@@ -148,5 +148,14 @@ h1:hover{
 }
 .brand{
     filter:
-    drop-shadow( 0 0 10px rgb(255, 255, 255), 03px 0 2px rgb(255, 255, 255)), -03px 0 5px rgb(0, 0, 0);
+    drop-shadow( 0 0 10px rgb(255, 255, 255));
+}
+.contact-image{
+    /* width: inherit; */
+    max-width: 12vw;
+    border-radius: 30px;
+}
+.contact-info{
+    padding:0;
+    margin: 0;
 }
