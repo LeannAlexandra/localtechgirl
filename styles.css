@@ -33,6 +33,17 @@ body{
     transition: var(--default-transition);
     text-align: center;
 }
+.profile-pic{
+    position: absolute;
+    bottom: 170px;
+    z-index: 1;
+}
+
+.introh1{
+    position: relative;
+    z-index: 1;
+}
+
 ul{
     list-style-type: none ;
 }
@@ -51,6 +62,22 @@ a:visited{
     text-decoration: none;
     margin: 5%;
 }
+.profile-image{
+    width: 229px;
+    border-radius: 50%;
+}
+ 
+#leanna{
+    border-radius: 50%;
+    transition: 600ms;
+    scale: 1.5 0;   
+} 
+
+#topText, #catchphrase, #introLineBreak{
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px white;
+}
 .intro
 {
     /* margin-top: 20vh; */
@@ -58,17 +85,27 @@ a:visited{
     text-align: center;
     /* background: radial-gradient(circle at center,transparent 30%, white 30%, white 31%, transparent 31%); */
     background: 
-        radial-gradient(circle at 45% 35%,white 3%, transparent 10%),
+        radial-gradient(circle at 45% 35%,rgba(255, 255, 255, 0.8) 3%, transparent 10%),
         radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
-        radial-gradient(circle at center,white 10%, transparent 30%, white 30%, white 34%, transparent 45%);
-
-    transition: 300ms;
+        radial-gradient(circle at center,rgba(255, 255, 255, 0.6) 10%, transparent 30%, white 30%, white 34%, transparent 45%);
+    
+    /* background: none; */
+    transition: 1000ms;
     /* ,var(--circle-rgb); */
     /* //min-height: 450px; */
     
     /* background: var(--default-rgb); */
         
 }
+/* Instead of the below hover; it needs to be eased into and eased out of in javascript      */
+/* .intro:hover
+{
+    background: 
+        radial-gradient(circle at 45% 35%,rgba(255, 255, 255, 0.2) 3%, transparent 10%),
+        radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
+        radial-gradient(circle at center,rgba(255, 255, 255, 0.2) 10%, transparent 30%, white 30%, white 34%, transparent 45%);    
+    transition: 1000ms;
+} */
 .margin-x{
     margin: 0 30px;
 }
@@ -152,10 +189,27 @@ h1:hover{
 }
 .contact-image{
     /* width: inherit; */
-    max-width: 12vw;
-    border-radius: 30px;
+   width: 229px;
+    border-radius: 50%;
+    /* margin-left: 0px; */
 }
 .contact-info{
     padding:0;
     margin: 0;
+}
+.marginleft{
+    margin-left: -12px;
+}
+.hidden{
+    display: none;
+}
+
+
+@media (max-width:768px) {
+    .contact-image{
+    display:none;
+}
+    .box{
+        display:none;
+    }
 }

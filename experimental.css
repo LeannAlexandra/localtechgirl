@@ -25,6 +25,8 @@
 /* /////////////////////////// RAINBOW BORDER WITH RADIUS> */
 
 .box {
+  height: 231px;
+  width: 231px;
     /* //display: ; */
     /* height: 30vw; */
     /* width: 30vw; */
@@ -40,8 +42,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 60px; 
-    padding: 5px; 
+    border-radius: 50%; 
+    padding: 7px; 
     background:var(--circle-rgb); 
     /* mask: none; */
     mask:inherit;
