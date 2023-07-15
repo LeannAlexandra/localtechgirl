@@ -203,6 +203,12 @@ h1:hover{
 .hidden{
     display: none;
 }
+.service-item-image{
+    max-width: 200px;
+}.service-description{
+    display: inline-block;
+    padding: 0 40px;
+}
 
 
 @media (max-width:768px) {
@@ -211,5 +217,8 @@ h1:hover{
 }
     .box{
         display:none;
+    }
+    .service-item-image{
+        display: none;
     }
 }
