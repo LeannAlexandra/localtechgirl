@@ -23,7 +23,8 @@
     user-select: none;
     --washout-rgb: var(--default-rgb);
     --clr-charcoal: rgb(93,93,93);
-
+    --clr-center: hotpink;
+    --clr-centerWashout: salmon;
 }
 /* ///////////////////HIDING THE SCROLLBAR COMPLETELY WITHOUT STOPPPING THE Y OVERFLOW */
 /* ///////////////////////////////////////////TRACKBAR ON THE Y AXIS////////////////////// */
@@ -150,6 +151,16 @@ footer{
     
     background: var(--default-rgb);
 }
+i{
+    font-size: 1.5rem;
+    color:var(--clr-centerWashout);
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+i:hover{
+    color: var(--clr-center);
+}
 .introblock
 {
     margin-top:30vh;
@@ -249,19 +260,20 @@ h1:hover{
 }
 
 .wrap {
-    /* the size of the actual display */
     width: 1920px;
     height: 1080px;
     padding: 0;
     overflow: hidden;
+    
   }
   
   .scaled-frame {
-    /* the size of the input before scaling */
     width: 1920px;
     height: 1080px;
     border: 0px;
     transition: 2s;
+    border-radius: 50px;
+    position:relative
   }
   
   .scaled-frame {
@@ -273,14 +285,27 @@ h1:hover{
     -webkit-transform: scale(0.2);
     -webkit-transform-origin: 0 0;
   }
-  .scaled-frame:hover{
-    transform: scale(.5);
-    position: relative;
+  
+  /*.scaled-frame:hover{
+    overflow: hidden;
+
+    transform: scale(.2);
     z-index: 4;
-  }
+    border-color: rgb(0, 179, 119);
+    border-width: 4px;
+    box-shadow: 0 0 40px aquamarine;
+    position: fixed;
+    
+     top: 50%; 
+     left: 50%; 
+    transform: translate(-50%,-50%);
+    max-height: 80vh;
+    max-width: 80vw;
+    border-radius: 0;
+  }*/
   
   @media screen and (-webkit-min-device-pixel-ratio:0) {
     .scaled-frame {
       zoom: 1;
     }
-  }
+  } 

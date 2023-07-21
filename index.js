@@ -4,6 +4,8 @@ const washoutValues =[];
 const rgbRadialValues =[];
 let jumpIndex=126;
 let calculateRGB=true;
+const socialIcons= document.getElementsByTagName("i");
+const numberOfVisibleColors=9; //(number of points on the spectrum, 9 with the current math produce a perfect continuation (conic)
 
 runCPUIntesive();//it's been optimized ...
 
@@ -15,6 +17,10 @@ runCPUIntesive();//it's been optimized ...
 let i=1;
 
 function runCPUIntesive(){
+    let si = socialIcons.length;
+    let skip =Math.floor((numberOfVisibleColors-si)/2);
+
+
     setInterval(() => {
         if (paused)
              return;   
@@ -44,7 +50,7 @@ function runCPUIntesive(){
             let conic=``;
             let cfirst=``;
             let washout=variable; //exactly square? -> `linear-gradient( ${90}deg` (as above, the angle does wonders. ) 
-            for(let a=0;a<9;a++){
+            for(let a=0;a<numberOfVisibleColors;a++){
                 let abstraction=Math.sin(f*i + ((phase++)*offset));
                 let r=Math.floor(abstraction * width + center);
                 let rwashout=Math.floor(abstraction * 20 + 235);
@@ -61,8 +67,17 @@ function runCPUIntesive(){
                     conic+=`rgb(${r},${g},${b})`;
                     cfirst=`, rgb(${r},${g},${b})`;
                 }
-                else
+                else{
                     conic+=temp;
+                    if(a===(Math.floor(numberOfVisibleColors/2))){
+                        document.documentElement.style.setProperty('--clr-center', `rgb(${r},${g},${b})`);
+                        document.documentElement.style.setProperty('--clr-centerWashout', `rgb(${rwashout},${gwashout},${bwashout})`);
+                    }
+                }
+                if (a-skip>=0 && a-skip<si){//the exact center value
+                    i
+                }
+                
             }
             washout+=`)`;
             variable+=`)`;
