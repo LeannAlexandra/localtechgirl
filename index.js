@@ -2,6 +2,8 @@ let paused=false;
 const rgbValues =[];
 const washoutValues =[];
 const rgbRadialValues =[];
+const centerValues=[];
+const centerWashoutValues=[];
 let jumpIndex=126;
 let calculateRGB=true;
 const socialIcons= document.getElementsByTagName("i");
@@ -35,6 +37,8 @@ function runCPUIntesive(){
             document.documentElement.style.setProperty('--default-rgb', rgbValues[i]);
             document.documentElement.style.setProperty('--circle-rgb', rgbRadialValues[i]);
             document.documentElement.style.setProperty('--washout-rgb', washoutValues[i]);
+            document.documentElement.style.setProperty('--clr-center', centerValues[i]);
+            document.documentElement.style.setProperty('--clr-centerWashout', centerWashoutValues[i]);
         }
         else{
             const offset=27;
@@ -70,13 +74,15 @@ function runCPUIntesive(){
                 else{
                     conic+=temp;
                     if(a===(Math.floor(numberOfVisibleColors/2))){
-                        document.documentElement.style.setProperty('--clr-center', `rgb(${r},${g},${b})`);
-                        document.documentElement.style.setProperty('--clr-centerWashout', `rgb(${rwashout},${gwashout},${bwashout})`);
-                    }
+                          document.documentElement.style.setProperty('--clr-center', `rgb(${r},${g},${b})`);
+                           document.documentElement.style.setProperty('--clr-centerWashout', `rgb(${rwashout},${gwashout},${bwashout})`);
+                           centerValues.push(`rgb(${r},${g},${b})`);
+                           centerWashoutValues.push(`rgb(${rwashout},${gwashout},${bwashout})`);
+                        }
                 }
-                if (a-skip>=0 && a-skip<si){//the exact center value
-                    i
-                }
+                //if (a-skip>=0 && a-skip<si){//the exact center value
+                //     
+                // }
                 
             }
             washout+=`)`;
