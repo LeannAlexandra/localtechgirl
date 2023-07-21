@@ -80,9 +80,9 @@ function runCPUIntesive(){
                            centerWashoutValues.push(`rgb(${rwashout},${gwashout},${bwashout})`);
                         }
                 }
-                //if (a-skip>=0 && a-skip<si){//the exact center value
-                //     
-                // }
+                if (a-skip>=0 && a-skip<si){//the exact center value
+                     
+                }
                 
             }
             washout+=`)`;
