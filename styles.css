@@ -279,6 +279,8 @@ h1:hover{
   
   .scaled-frame {
     zoom: 0.2;
+    transform: scale(0.2);
+    transform-origin: 0 0;
     -moz-transform: scale(0.2);
     -moz-transform-origin: 0 0;
     -o-transform: scale(0.2);

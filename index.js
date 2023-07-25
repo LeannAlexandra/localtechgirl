@@ -81,7 +81,7 @@ function runCPUIntesive(){
                         }
                 }
                 if (a-skip>=0 && a-skip<si){//the exact center value
-                     
+                     socialIcons[a].setAttribute.style.background(`rgb(${rwashout},${gwashout},${bwashout})`);
                 }
                 
             }
