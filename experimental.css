@@ -35,3 +35,75 @@
  background-color: #fffc54;
 
 }
+
+
+
+
+/* /////////////////// THE CODE FOR THE "GLIMPSE INTO THE SITE FEATURE.... */
+/* DEPRECATED>... rather using images -> with hyperlink. (considering animated gif's)
+
+@media (max-width:768px) {
+  .contact-image{
+  display:none;
+}
+  .box{
+      display:none;
+  }
+  .service-item-image{
+      display: none;
+  }
+}
+
+.wrap {
+  width: 1920px;
+  height: 1080px;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.scaled-frame {
+  width: 1920px;
+  height: 1080px;
+  border: 0px;
+  transition: 2s;
+  border-radius: 50px;
+  position:relative
+}
+
+.scaled-frame {
+  zoom: 0.2;
+  transform: scale(0.2);
+  transform-origin: 0 0;
+  -moz-transform: scale(0.2);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.2);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.2);
+  -webkit-transform-origin: 0 0;
+}
+
+/*.scaled-frame:hover{
+  overflow: hidden;
+
+  transform: scale(.2);
+  z-index: 4;
+  border-color: rgb(0, 179, 119);
+  border-width: 4px;
+  box-shadow: 0 0 40px aquamarine;
+  position: fixed;
+  
+   top: 50%; 
+   left: 50%; 
+  transform: translate(-50%,-50%);
+  max-height: 80vh;
+  max-width: 80vw;
+  border-radius: 0;
+}* /
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .scaled-frame {
+    zoom: 1;
+  }
+}  
+*/
