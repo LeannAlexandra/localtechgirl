@@ -145,9 +145,9 @@ setInterval(()=>{
     const direction= introState>introTargetState? -1: 1;
         //lineAR MATH
     introState+=direction*(movement);
-    console.log(`step ${direction*(movement)}`);
+    // console.log(`step ${direction*(movement)}`);
     introState= introState<0? 0:introState>1? 1: introState;
-    console.log(`moving ${direction>0? `to`: `from`} center ${introState}`);
+    // console.log(`moving ${direction>0? `to`: `from`} center ${introState}`);
     const transparancy={
         one: 0.8,
         two: 0.2,
@@ -156,7 +156,7 @@ setInterval(()=>{
     };
     if(introState<=0.51&&introState>=0.49 ){
         profilePicture.style.zIndex= direction>0?profilePicture.style.zIndex=0  :profilePicture.style.zIndex=2;
-        console.log(`SWITCHED`);
+        // console.log(`SWITCHED`);
         profilePicture.style.scale= `1.5 ${(1-introTargetState)*1.5}`;
     }
     const fiftypercentline= (1-Math.abs( (introState -0.50))*2)**4 ;

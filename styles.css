@@ -110,11 +110,7 @@ a:visited{
     height: 70vh;
     text-align: center;
     /* background: radial-gradient(circle at center,transparent 30%, white 30%, white 31%, transparent 31%); */
-    background: 
-        radial-gradient(circle at 45% 35%,rgba(255, 255, 255, 0.8) 3%, transparent 10%),
-        radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
-        radial-gradient(circle at center,rgba(255, 255, 255, 0.6) 10%, transparent 30%, white 30%, white 34%, transparent 45%);
-    
+   background: transparent;
     /* background: none; */
     transition: 1000ms;
     /* ,var(--circle-rgb); */
@@ -253,4 +249,35 @@ h1:hover{
 }
 .project-preview{
     max-width: 100%;
+}
+.contact-image-frame{
+    display: none;
+}
+.subheadding{
+    line-height: 0.6;
+    margin-top: 0;
+    display: none;
+   /* // color: green; */
+}
+.list-item-flex{
+color: red;
+text-align: left;
+}
+
+@media (min-width:768px) {
+    .contact-image-frame{
+        display:inline-block;
+    }
+    .subheadding{
+        display:inline-block;
+    }
+    .intro
+{
+    /* background: none; */
+    background: 
+    radial-gradient(circle at 45% 35%,rgba(255, 255, 255, 0.8) 3%, transparent 10%),
+    radial-gradient(circle at center, transparent 20%, rgba(255, 255, 255, 0.2) 30.2%,transparent 30.2%),
+    radial-gradient(circle at center,rgba(255, 255, 255, 0.6) 10%, transparent 30%, white 30%, white 34%, transparent 45%);
+
+}
 }
